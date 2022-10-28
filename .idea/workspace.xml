@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba5e1e17-449d-41ba-912e-9d26883266fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pm1107/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pm1476/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pm1929/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pm1978/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pm2309/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pm2609/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pm3085/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pm6588/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pm14500/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pm1107/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pm1107/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,28 +42,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "aspect.path.notification.shown": "true",
-    "last_opened_file_path": "C:/JavaProjects/CodingTest",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;aspect.path.notification.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JavaProjects/CodingTest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pm1929" />
       <recent name="pm17427" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pm1476.Main" />
       <module name="CodingTest.main" />
@@ -82,12 +77,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="pm1929.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pm1929.Main" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="CodingTest.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pm1107.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pm1107.Main" />
       <module name="CodingTest.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pm1929.*" />
+          <option name="PATTERN" value="pm1107.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,25 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="pm1978.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pm1978.Main" />
+    <configuration name="pm14500.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pm14500.Main" />
       <module name="CodingTest.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pm1978.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="pm2309.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pm2309.Main" />
-      <module name="CodingTest.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pm2309.*" />
+          <option name="PATTERN" value="pm14500.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.pm14500.Main" />
+        <item itemvalue="Application.pm1107.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.pm3085.Main" />
-        <item itemvalue="Application.pm2309.Main" />
-        <item itemvalue="Application.pm1929.Main" />
-        <item itemvalue="Application.pm1978.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -155,6 +144,7 @@
       <workItem from="1666696553731" duration="7405000" />
       <workItem from="1666798325380" duration="91000" />
       <workItem from="1666872012929" duration="16732000" />
+      <workItem from="1666936938439" duration="7686000" />
     </task>
     <servers />
   </component>
