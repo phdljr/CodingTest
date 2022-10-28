@@ -1,4 +1,4 @@
-package pm3085;
+package beakjoon.pm3085;
 
 import java.util.Scanner;
 

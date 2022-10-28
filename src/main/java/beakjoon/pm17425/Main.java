@@ -1,4 +1,4 @@
-package pm17425;
+package beakjoon.pm17425;
 
 import java.io.*;
 import java.util.Arrays;

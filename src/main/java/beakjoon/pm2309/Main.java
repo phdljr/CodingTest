@@ -1,4 +1,4 @@
-package pm2309;
+package beakjoon.pm2309;
 
 import java.util.Arrays;
 import java.util.Scanner;

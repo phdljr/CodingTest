@@ -1,4 +1,4 @@
-package pm1929;
+package beakjoon.pm6588;
 
 import java.util.Scanner;
 
@@ -19,12 +19,6 @@ public class Main {
                 for(int j=i*i;j<=n;j+=i){
                     arr[j] = 0;
                 }
-            }
-        }
-
-        for(int i=m;i<=n;i++){
-            if(arr[i] != 0){
-                System.out.println(arr[i]);
             }
         }
     }
