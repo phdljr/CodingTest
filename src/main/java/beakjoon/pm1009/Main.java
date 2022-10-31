@@ -3,28 +3,30 @@ package beakjoon.pm1009;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Main {
+    static int k;
+    static char[] arr;
+    static boolean[] check;
+    static int[] numArr;
+    static long answer = 1;
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(reader.readLine());
+        Scanner sc = new Scanner(System.in);
+        k = Integer.parseInt(sc.nextLine()); // 부등호 개수
+        numArr = new int[k+1];
+        arr = sc.nextLine().toCharArray(); // 부등호 배열
+        check = new boolean[10]; // 사용된 숫자 사용 여부
 
-        for(int i=0;i<t;i++){
-            String[] temp = reader.readLine().split(" ");
+        go(0, 0, 9);
+    }
 
-            int a = Integer.parseInt(temp[0]);
-            int b = Integer.parseInt(temp[1]);
+    private static void go(int index, int bigger, int less){
+        // 종료 조건
+        if(index == k){
 
-            int result = a;
-
-            for(int j=2;j<=b;j++){
-                result = (result * a)%10;
-            }
-
-            if(result == 0)
-                result = 10;
-
-            System.out.println(result);
         }
+
+        // 실패 조건
     }
 }
