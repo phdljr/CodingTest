@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba5e1e17-449d-41ba-912e-9d26883266fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/beakjoon/pm15651/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/beakjoon/pm14501/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/beakjoon/pm14889/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/beakjoon/pm1759/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/beakjoon/pm2529/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/beakjoon/pm9095/AnotherMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,19 +60,20 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="beakjoon.pm15651" />
-      <recent name="beakjoon.pm15650" />
-      <recent name="pm1929" />
-      <recent name="pm17427" />
+      <recent name="beakjoon.pm2529" />
+      <recent name="beakjoon.pm14889" />
+      <recent name="beakjoon.pm14501" />
+      <recent name="beakjoon.pm1759" />
+      <recent name="beakjoon.pm9095" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.beakjoon.pm15652.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="beakjoon.pm15649.Main" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="AnotherMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="beakjoon.pm9095.AnotherMain" />
       <module name="CodingTest.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="beakjoon.pm15649.*" />
+          <option name="PATTERN" value="beakjoon.pm9095.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,12 +81,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="beakjoon.pm15650.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="beakjoon.pm15650.Main" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="beakjoon.pm14501.Main" />
       <module name="CodingTest.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="beakjoon.pm15650.*" />
+          <option name="PATTERN" value="beakjoon.pm14501.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="beakjoon.pm9095.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="beakjoon.pm9095.Main" />
+    <configuration name="beakjoon.pm1759.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="beakjoon.pm1759.Main" />
       <module name="CodingTest.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="beakjoon.pm9095.*" />
+          <option name="PATTERN" value="beakjoon.pm1759.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.beakjoon.pm1759.Main" />
+        <item itemvalue="Application.AnotherMain" />
         <item itemvalue="Application.beakjoon.pm15652.Main" />
         <item itemvalue="Application.beakjoon.pm15651.Main" />
-        <item itemvalue="Application.beakjoon.pm15650.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.beakjoon.pm9095.Main" />
       </list>
     </recent_temporary>
   </component>
