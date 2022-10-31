@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba5e1e17-449d-41ba-912e-9d26883266fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/beakjoon/pm15651/Main.java" afterDir="false" />
+    <list default="true" id="ba5e1e17-449d-41ba-912e-9d26883266fe" name="Changes" comment="push">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +46,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;aspect.path.notification.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/JavaProjects/CodingTest&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JavaProjects/CodingTest&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -56,19 +56,33 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="beakjoon.pm18290" />
+      <recent name="beakjoon.pm15652" />
       <recent name="beakjoon.pm15651" />
       <recent name="beakjoon.pm15650" />
       <recent name="pm1929" />
-      <recent name="pm17427" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.beakjoon.pm15652.Main">
+  <component name="RunManager" selected="Application.beakjoon.pm1009.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="beakjoon.pm15649.Main" />
       <module name="CodingTest.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="beakjoon.pm15649.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="beakjoon.pm1009.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="beakjoon.pm1009.Main" />
+      <module name="CodingTest.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="beakjoon.pm1009.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,26 +129,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="beakjoon.pm9095.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="beakjoon.pm9095.Main" />
-      <module name="CodingTest.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="beakjoon.pm9095.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.beakjoon.pm1009.Main" />
         <item itemvalue="Application.beakjoon.pm15652.Main" />
         <item itemvalue="Application.beakjoon.pm15651.Main" />
         <item itemvalue="Application.beakjoon.pm15650.Main" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.beakjoon.pm9095.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -149,8 +150,20 @@
       <workItem from="1666696553731" duration="7405000" />
       <workItem from="1666798325380" duration="91000" />
       <workItem from="1666872012929" duration="16732000" />
-      <workItem from="1666936938439" duration="18188000" />
+      <workItem from="1666936938439" duration="18727000" />
+      <workItem from="1666985708160" duration="2022000" />
+      <workItem from="1667024877519" duration="1494000" />
+      <workItem from="1667157028541" duration="1139000" />
+      <workItem from="1667242644114" duration="121000" />
     </task>
+    <task id="LOCAL-00001" summary="push">
+      <created>1667159342105</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667159342105</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,5 +179,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="push" />
+    <option name="LAST_COMMIT_MESSAGE" value="push" />
   </component>
 </project>
