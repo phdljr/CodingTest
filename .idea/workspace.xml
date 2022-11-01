@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba5e1e17-449d-41ba-912e-9d26883266fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/programmers/pm12951/Solution.java" afterDir="false" />
+    <list default="true" id="ba5e1e17-449d-41ba-912e-9d26883266fe" name="Changes" comment="push">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -57,20 +56,20 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="programmers.pm42885" />
+      <recent name="programmers.pm12981" />
+      <recent name="programmers.pm12911" />
+      <recent name="programmers.pm12924" />
       <recent name="beakjoon.pm2529" />
-      <recent name="beakjoon.pm14889" />
-      <recent name="beakjoon.pm14501" />
-      <recent name="beakjoon.pm1759" />
-      <recent name="beakjoon.pm9095" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution">
-    <configuration name="AnotherMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="beakjoon.pm9095.AnotherMain" />
+  <component name="RunManager" selected="Application.programmers.pm12953.Solution">
+    <configuration name="programmers.pm12909.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="programmers.pm12909.Solution" />
       <module name="CodingTest.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="beakjoon.pm9095.*" />
+          <option name="PATTERN" value="programmers.pm12909.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,12 +77,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="beakjoon.pm14501.Main" />
+    <configuration name="programmers.pm12911.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="programmers.pm12911.Solution" />
       <module name="CodingTest.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="beakjoon.pm14501.*" />
+          <option name="PATTERN" value="programmers.pm12911.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,12 +90,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="programmers.pm12951.Solution" />
+    <configuration name="programmers.pm12953.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="programmers.pm12953.Solution" />
       <module name="CodingTest.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="programmers.pm12951.*" />
+          <option name="PATTERN" value="programmers.pm12953.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="beakjoon.pm15652.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="beakjoon.pm15652.Main" />
+    <configuration name="programmers.pm42885.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="programmers.pm42885.Solution" />
       <module name="CodingTest.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="beakjoon.pm15652.*" />
+          <option name="PATTERN" value="programmers.pm42885.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +116,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="beakjoon.pm1759.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="beakjoon.pm1759.Main" />
+    <configuration name="programmers.pm70129.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="programmers.pm70129.Solution" />
       <module name="CodingTest.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="beakjoon.pm1759.*" />
+          <option name="PATTERN" value="programmers.pm70129.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.beakjoon.pm1759.Main" />
-        <item itemvalue="Application.AnotherMain" />
-        <item itemvalue="Application.beakjoon.pm15652.Main" />
+        <item itemvalue="Application.programmers.pm12953.Solution" />
+        <item itemvalue="Application.programmers.pm42885.Solution" />
+        <item itemvalue="Application.programmers.pm12911.Solution" />
+        <item itemvalue="Application.programmers.pm70129.Solution" />
+        <item itemvalue="Application.programmers.pm12909.Solution" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667159342105</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="push">
+      <created>1667317884302</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667317884302</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,5 +190,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="push" />
     <option name="LAST_COMMIT_MESSAGE" value="push" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/programmers/pm70129/Solution.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
