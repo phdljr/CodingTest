@@ -2,7 +2,8 @@ package programmers.pm12951;
 
 class Solution {
     public static void main(String[] args) {
-        String[] temp = "a  b".split(" ");
+        String str = "  1";
+        System.out.println(new Solution().solution(str));
     }
     // A65  a97
     public String solution(String s) {
@@ -11,9 +12,9 @@ class Solution {
         String[] words = s.split(" ");
 
         for(String word: words){
-            if(word.length() == 0){
-                continue;
-            }
+//            if(word.length() == 0){
+//                continue;
+//            }
             sb.append(word.toLowerCase()); // 소문자
             if(sb.length() > 0 && isSmallAlphabet(sb.charAt(0))){
                 sb.replace(0, 1, String.valueOf((char)(sb.charAt(0) - 32)));
