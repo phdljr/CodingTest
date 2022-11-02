@@ -2,26 +2,34 @@ package programmers.pm12951;
 
 class Solution {
     public static void main(String[] args) {
-        String[] temp = "a  b".split(" ");
+        String str = "asadas qwew  xzczx";
+        System.out.println(new Solution().solution(str));
     }
     // A65  a97
     public String solution(String s) {
-        StringBuilder sb = new StringBuilder();
-        StringBuilder sbAnswer = new StringBuilder();
-        String[] words = s.split(" ");
+        StringBuilder sb = new StringBuilder(s.toLowerCase());
 
-        for(String word: words){
-            if(word.length() == 0){
+        if(sb.length() == 1){
+            if(isSmallAlphabet(sb.charAt(0))){
+                sb.setCharAt(0, (char) (sb.charAt(0) - 32));
+                return sb.toString();
+            }
+        }
+
+        for(int i=0;i<sb.length()-1;i++){
+            char c1 = sb.charAt(i);
+            char c2 = sb.charAt(i + 1);
+            if (i == 0 && isSmallAlphabet(c1)) {
+                sb.setCharAt(0, (char) (c1 - 32));
                 continue;
             }
-            sb.append(word.toLowerCase()); // 소문자
-            if(sb.length() > 0 && isSmallAlphabet(sb.charAt(0))){
-                sb.replace(0, 1, String.valueOf((char)(sb.charAt(0) - 32)));
+
+            if (c1 == ' ' && isSmallAlphabet(c2)) {
+                sb.setCharAt(i + 1, (char) (c2 - 32));
             }
-            sbAnswer.append(sb.toString() + " ");
-            sb.delete(0, sb.length());
         }
-        return sbAnswer.toString().trim();
+
+        return sb.toString();
     }
 
     public static boolean isSmallAlphabet(char c){
