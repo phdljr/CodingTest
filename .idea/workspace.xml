@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba5e1e17-449d-41ba-912e-9d26883266fe" name="Changes" comment="">
+    <list default="true" id="ba5e1e17-449d-41ba-912e-9d26883266fe" name="Changes" comment="push">
       <change afterPath="$PROJECT_DIR$/src/main/java/programmers/pm12951/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
