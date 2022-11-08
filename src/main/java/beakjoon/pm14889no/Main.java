@@ -1,4 +1,4 @@
-package beakjoon.pm14889;
+package beakjoon.pm14889no;
 
 import java.util.Scanner;
 
