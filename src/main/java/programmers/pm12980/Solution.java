@@ -1,13 +1,16 @@
 package programmers.pm12980;
 
 public class Solution {
-    public int solution(int n) {
-        int answer = 0;
 
-        for(int k=0;k<n;){
-            
+    static int[] d = new int[100000000];
+
+    public int solution(int n) {
+
+        d[0] = 0;
+        for(int i=1;i<=n;i++){
+
         }
 
-        return answer;
+        return d[n];
     }
 }
