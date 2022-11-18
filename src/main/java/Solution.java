@@ -1,40 +1,24 @@
+import java.util.Base64;
 import java.util.Scanner;
 
 public class Solution {
 
-    static int[][] a = new int[7][7];
-
     public static void main(String args[]) throws Exception {
 
         Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
 
-        for(int test_case = 1; test_case <= T; test_case++) {
-            int n = sc.nextInt();
-            for(int i=0;i<n;i++){
-                for(int j=0;j<n;j++){
-                    a[i][j] = sc.nextInt();
-                }
-            }
-            rotate(a, n, test_case);
-        }
-    }
+        for(int test_case = 1; test_case <= 10; test_case++) {
+            sc.nextLine();
+            String word = sc.nextLine();
+            String s = sc.nextLine();
 
-    public static void rotate(int[][] arr, int n, int t){
-        System.out.printf("#%d\n", t);
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                System.out.print(arr[n-j-1][i]);
+            int cnt = 0;
+            while (s.contains(word)){
+                s = s.replaceFirst(word, "");
+                cnt++;
             }
-            System.out.print(" ");
-            for(int j=0;j<n;j++){
-                System.out.print(arr[n-i-1][n-j-1]);
-            }
-            System.out.print(" ");
-            for(int j=0;j<n;j++){
-                System.out.print(arr[n-(n-j-1)-1][n-i-1]);
-            }
-            System.out.println();
+
+            System.out.printf("#%d %d\n", test_case, cnt);
         }
     }
 }
