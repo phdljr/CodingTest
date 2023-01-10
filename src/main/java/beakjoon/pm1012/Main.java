@@ -20,7 +20,7 @@ public class Main {
 
     static int[][] arr;
     static boolean[][] check;
-    static int[] dx = {-1, 1, 0, 0};
+    static int[] dx = {-1, 1, 0, 0}; // 상 하 좌 우
     static int[] dy = {0, 0, -1, 1};
     static int m;
     static int n;
@@ -62,16 +62,16 @@ public class Main {
         stack.add(pair);
         while (!stack.isEmpty()) {
             Pair p = stack.pop();
-            int x = p.x;
-            int y = p.y;
-            if (arr[x][y] == 1) {
-                if(!check[x][y]) {
+            int cx = p.x;
+            int cy = p.y;
+            if (arr[cx][cy] == 1) {
+                if(!check[cx][cy]) {
                     result++;
-                    check[x][y] = true;
+                    check[cx][cy] = true;
                 }
                 for (int i = 0; i < 4; i++) {
-                    int nx = x + dx[i];
-                    int ny = y + dy[i];
+                    int nx = cx + dx[i];
+                    int ny = cy + dy[i];
                     if (0 <= nx && nx < m && 0 <= ny && ny < n) {
                         if(arr[nx][ny] != 1){
                             continue;
