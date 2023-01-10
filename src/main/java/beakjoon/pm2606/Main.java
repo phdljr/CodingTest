@@ -38,7 +38,7 @@ public class Main {
     }
 
     private static void bfs(int start) {
-        Queue<Integer> queue = new LinkedList();
+        Queue<Integer> queue = new LinkedList<>();
         queue.add(start);
         while (!queue.isEmpty()) {
             Integer n = queue.remove();
@@ -49,8 +49,7 @@ public class Main {
                 }
             }
             ArrayList<Integer> list = g.get(n);
-            for (int i = 0; i < list.size(); i++) {
-                Integer node = list.get(i);
+            for (Integer node : list) {
                 if (!check[node]) {
                     queue.add(node);
                     check[node] = true;
