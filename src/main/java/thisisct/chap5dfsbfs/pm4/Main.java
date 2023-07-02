@@ -3,6 +3,8 @@ package thisisct.chap5dfsbfs.pm4;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -33,6 +35,7 @@ public class Main {
         bfs(arr, 0, 0, n, m);
 
         System.out.println(arr[n-1][m-1]);
+
     }
 
     public static void bfs(int[][] arr, int x, int y, int n, int m) {
