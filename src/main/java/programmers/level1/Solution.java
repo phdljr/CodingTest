@@ -1,6 +1,6 @@
 package programmers.level1;
 
-class Solution {
+public class Solution {
     public int solution(int[] number) {
         int answer = 0;
         for(int i=0;i<number.length;i++){
