@@ -6,7 +6,7 @@ import java.util.Queue;
 public class Solution {
     public int[] solution(int k, int[] score) {
         int[] answer = new int[score.length];
-        Queue<Integer> queue = new PriorityQueue<Integer>();
+        Queue<Integer> queue = new PriorityQueue<>();
 
         for(int i=0;i<score.length;i++){
             queue.add(score[i]);
