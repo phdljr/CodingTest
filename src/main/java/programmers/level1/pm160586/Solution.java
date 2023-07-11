@@ -4,17 +4,37 @@ public class Solution {
     public int[] solution(String[] keymap, String[] targets) {
         int[] answer = new int[targets.length];
 
-        for(int i=0;i<targets.length;i++){ //target 전체 반복
-            for(int j=0;j<targets[i].length();j++){ // target 한 단어의 길이만큼
-                String t = targets[i].substring(j, j+1); // targets[i] 의 j번째 문자
-
-                int index = keymap[0].indexOf(t);
-                for(int k=1;k<keymap.length;k++){
-                    if(index > keymap[k].indexOf(t)){
-                        index = keymap[k].indexOf(t);
+        for(int i=0;i<targets.length;i++){
+            for(int j=0;j<targets[i].length();j++){
+                // 타겟 단어 하나씩 검사
+                String alpha = targets[i].substring(j,j+1);
+                int count = 0;
+                for(int k=0;k<keymap.length;k++){
+                    if(keymap[k].indexOf(alpha) == -1){
+                        count++;
                     }
                 }
+                if(count == keymap.length){
+                    answer[i] = -1;
+                    break;
+                }
+            }
 
+            for(int j=0;j<targets[i].length();j++){
+                String alpha = targets[i].substring(j, j+1);
+
+                int index = 10000;
+                for(int k=0;k<keymap.length;k++){
+                    if(keymap[k].indexOf(alpha) == -1){
+                        continue;
+                    }
+
+                    if(keymap[k].indexOf(alpha) + 1 < index){
+                        index = keymap[k].indexOf(alpha) + 1;
+                    }
+                }
+                if(answer[i] == -1)
+                    continue;
                 answer[i] += index;
             }
         }
@@ -22,8 +42,8 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        String[] a = {"AGZ", "BSSS"};
-        String[] b = {"ASA", "BGZ"};
-        System.out.println(new Solution().solution(a,b));
+        String[] a1 = {"ABACD", "BCEFD"};
+        String[] a2 = {"ABCD","AABB"};
+        new Solution().solution(a1,a2);
     }
 }

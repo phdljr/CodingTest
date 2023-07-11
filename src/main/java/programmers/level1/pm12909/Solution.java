@@ -1,4 +1,4 @@
-package programmers.pm12909;
+package programmers.level1.pm12909;
 
 import java.util.Stack;
 
