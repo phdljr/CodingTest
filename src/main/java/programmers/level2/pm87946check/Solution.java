@@ -1,4 +1,4 @@
-package programmers.level2.pm87946;
+package programmers.level2.pm87946check;
 
 public class Solution {
     static int answer = 0;
