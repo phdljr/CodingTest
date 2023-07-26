@@ -16,12 +16,9 @@ public class Solution {
             if(check[i] == true || k < dungeons[i][0]){
                 continue;
             }
-
             check[i] = true;
             k -= dungeons[i][1];
-
             dfs(k, dungeons, count+1);
-
             check[i] = false;
             k += dungeons[i][1];
         }
