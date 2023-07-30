@@ -1,5 +1,7 @@
 package programmers.level1;
 
+import java.util.ArrayList;
+
 public class Solution {
 
     public int solution(int[] number) {
@@ -13,6 +15,7 @@ public class Solution {
                 }
             }
         }
+        new ArrayList<Integer>().toArray();
         return answer;
     }
 }
