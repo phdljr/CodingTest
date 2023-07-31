@@ -22,11 +22,11 @@ public class Solution {
     public int solution(int[][] maps) {
         n = maps.length;
         m = maps[0].length;
-        dfs(maps);
+        bfs(maps);
         return maps[n-1][m-1] == 1 ? -1 : maps[n-1][m-1];
     }
 
-    public void dfs(int[][] maps){
+    public void bfs(int[][] maps){
         Queue<Node> queue = new LinkedList<>();
         queue.add(new Node(0,0));
 
