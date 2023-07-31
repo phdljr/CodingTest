@@ -1,4 +1,4 @@
-package programmers.level2.pm1844;
+package programmers.level2.pm1844check;
 
 import java.util.*;
 
