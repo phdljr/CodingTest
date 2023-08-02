@@ -1,4 +1,4 @@
-package thisisct.chap9shortestpath.pm1;
+package thisisct.chap9shortestpath.pm1.dijkstra;
 
 import java.util.*;
 

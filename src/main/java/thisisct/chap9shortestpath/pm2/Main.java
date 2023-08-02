@@ -1,86 +1,49 @@
 package thisisct.chap9shortestpath.pm2;
 
-import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.PriorityQueue;
 import java.util.Scanner;
 
-class Node implements Comparable<Node>{
-    int index;
-    int weight;
-
-    public Node(int index, int weight) {
-        this.index = index;
-        this.weight = weight;
-    }
-
-    public int getIndex() {
-        return index;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    @Override
-    public int compareTo(Node o) {
-        if(weight < o.weight){
-            return -1;
-        }
-        return 1;
-    }
-}
-
 public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String[] str = in.readLine().split(" ");
+        int n = Integer.parseInt(str[0]); // 노드 개수
+        int m = Integer.parseInt(str[1]); // 경로 개수
+        int INF = (int)1e9;
 
-    public static int INF = (int)1e9;
-    // n: 노드 개수, m: 간선 개수, start: 시작 노드
-    public static int n, m, start;
-    public static int[] d = new int[100001];
-    public static ArrayList<ArrayList<Node>> graph = new ArrayList<>();
+        int[][] graph = new int[n+1][n+1];
+        for(int i=0;i<n+1;i++){
+            Arrays.fill(graph[i], INF);
+        }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        m = sc.nextInt();
-        start = sc.nextInt();
-
-        for(int i=0;i<=n;i++)
-            graph.add(new ArrayList<Node>());
+        for(int i=1;i<=n;i++){
+            graph[i][i] = 0;
+        }
 
         for(int i=0;i<m;i++){
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int c = sc.nextInt();
-            graph.get(a).add(new Node(b, c));
+            str = in.readLine().split(" ");
+            int from = Integer.parseInt(str[0]);
+            int to = Integer.parseInt(str[1]);
+            graph[from][to] = 1;
+            graph[to][from] = 1;
         }
 
-        Arrays.fill(d, INF);
+        str = in.readLine().split(" ");
+        int X = Integer.parseInt(str[0]);
+        int K = Integer.parseInt(str[1]);
 
-        dijkstra(start);
-
-        System.out.println("끝");
-    }
-
-    public static void dijkstra(int start){
-        PriorityQueue<Node> heap = new PriorityQueue<>();
-        heap.add(new Node(start, 0));
-        d[start] = 0;
-
-        while(!heap.isEmpty()){
-            Node node = heap.poll();
-            int dist = node.getWeight();
-            int now = node.getIndex();
-
-            if(d[now] < dist) continue;
-            for(int i=0;i<graph.get(now).size();i++){
-                int cost = d[now] + graph.get(now).get(i).getWeight();
-                if(cost < d[graph.get(now).get(i).getIndex()]){
-                    d[graph.get(now).get(i).getIndex()] = cost;
-                    heap.add(new Node(graph.get(now).get(i).getIndex(), cost));
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n;j++){
+                for(int k=1;k<=n;k++){
+                    graph[i][j] = Math.min(graph[i][j], graph[i][k] + graph[k][j]);
                 }
             }
         }
+
+        int answer = graph[1][K] + graph[K][X] >= INF ? -1 : graph[1][K] + graph[K][X];
+        System.out.println(answer);
     }
 }
-
