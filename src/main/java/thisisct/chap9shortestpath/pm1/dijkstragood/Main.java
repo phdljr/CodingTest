@@ -1,4 +1,4 @@
-package thisisct.chap9shortestpath.pm1.dijkstra.pm2;
+package thisisct.chap9shortestpath.pm1.dijkstragood;
 
 import java.util.ArrayList;
 import java.util.Arrays;

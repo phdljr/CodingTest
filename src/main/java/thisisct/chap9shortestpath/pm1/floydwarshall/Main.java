@@ -1,4 +1,4 @@
-package thisisct.chap9shortestpath.pm1.dijkstra.pm3;
+package thisisct.chap9shortestpath.pm1.floydwarshall;
 
 import java.util.Arrays;
 import java.util.Scanner;
