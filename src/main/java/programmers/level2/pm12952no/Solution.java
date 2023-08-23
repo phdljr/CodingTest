@@ -13,11 +13,10 @@ public class Solution {
     }
 
     public void go(int x, int y, int n){
-        // 1. 행 위치 확인
+        // 1. 행 위치 확인(for문으로 처리)
         // 2. 열 위치 확인
         // 3. 대각선 위치 확인
         for(int i=1;i<x;i++){
-            if(x == i) return;
             if(y == vy[i]) return;
             if(Math.abs(x - i) == Math.abs(y - vy[i])) return;
         }
