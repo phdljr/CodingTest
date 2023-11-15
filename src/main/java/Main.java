@@ -1,10 +1,11 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.*;
 
-class Node{
+class Node {
     int x, y, time;
 
-    public Node(int x, int y, int time){
+    public Node(int x, int y, int time) {
         this.x = x;
         this.y = y;
         this.time = time;
@@ -28,11 +29,11 @@ public class Main {
         map = new int[x][y];
         check = new boolean[x][y];
         List<Node> list = new ArrayList<>();
-        for(int i=0;i<x;i++){
+        for (int i = 0; i < x; i++) {
             str = br.readLine().split(" ");
-            for(int j=0;j<y;j++){
+            for (int j = 0; j < y; j++) {
                 map[i][j] = Integer.parseInt(str[j]);
-                if(map[i][j] == 1){
+                if (map[i][j] == 1) {
                     list.add(new Node(i, j, 0));
                     check[i][j] = true;
                 }
@@ -43,28 +44,28 @@ public class Main {
         System.out.println(result);
     }
 
-    public static int bfs(List<Node> list){
+    public static int bfs(List<Node> list) {
         Queue<Node> queue = new LinkedList<>(list);
         int result = 0;
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             Node node = queue.poll();
-            for(int i=0;i<4;i++){
+            for (int i = 0; i < 4; i++) {
                 int nx = node.x + dx[i];
                 int ny = node.y + dy[i];
                 int time = node.time + 1;
 
-                if(!(0 <= nx && nx < x && 0 <= ny && ny < y)){
+                if (!(0 <= nx && nx < x && 0 <= ny && ny < y)) {
                     continue;
                 }
 
-                if(check[nx][ny]){
+                if (check[nx][ny]) {
                     continue;
                 }
 
-                if(map[nx][ny] == 0){
+                if (map[nx][ny] == 0) {
                     queue.add(new Node(nx, ny, time));
                     check[nx][ny] = true;
-                    if(result < time){
+                    if (result < time) {
                         result = time;
                     }
                 }
