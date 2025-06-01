@@ -1,3 +1,13 @@
+WITH RANKED AS(
+    SELECT 
+        MEMBER_ID,
+        RANK() OVER (ORDER BY COUNT(*) DESC) AS RANKING
+    FROM 
+        REST_REVIEW
+    GROUP BY 
+        MEMBER_ID
+)
+
 SELECT 
     P.MEMBER_NAME,
     R.REVIEW_TEXT,
@@ -9,16 +19,9 @@ FROM
     AND P.MEMBER_ID IN (
         SELECT 
             MEMBER_ID 
-        FROM (
-            SELECT 
-                R.MEMBER_ID,
-                RANK() OVER (ORDER BY COUNT(*) DESC) as RANKING
-            FROM 
-                REST_REVIEW AS R
-            GROUP BY 
-                R.MEMBER_ID
-        ) AS RANKED 
-        WHERE 
+        FROM
+            RANKED
+        WHERE
             RANKING = 1
     )
 ORDER BY 
