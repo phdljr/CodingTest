@@ -12,6 +12,7 @@ class Solution {
             for(int j=i;j<lastIndex;j++){
                 list.add(discount[j]);
             }
+            
             HashSet<String> set = new HashSet<>(list);
             
             boolean flag = false;
