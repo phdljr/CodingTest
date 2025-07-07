@@ -18,7 +18,6 @@ class Solution {
                 sb.setCharAt(0, (char) (c1 - 32));
                 continue;
             }
-
             if (c1 == ' ' && isSmallAlphabet(c2)) {
                 sb.setCharAt(i + 1, (char) (c2 - 32));
             }
