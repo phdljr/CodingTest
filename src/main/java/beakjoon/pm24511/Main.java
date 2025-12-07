@@ -50,8 +50,9 @@ class StructFactory{
 
     public int pushAndPop(int input){
         int result = input;
-        for(int i=0;i<structs.length;i++){
-            result = structs[i].pushAndPop(result);
+
+        for (Struct struct : structs) {
+            result = struct.pushAndPop(result);
         }
 
         return result;
