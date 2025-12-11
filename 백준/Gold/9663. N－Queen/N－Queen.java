@@ -42,39 +42,14 @@ public class Main {
     private static boolean canPlace(int r, int c){
         int n = map.length;
         for(int i=0;i<n;i++){
-            if(map[r][i] == true)
-                return false;
-        }
-        for(int i=0;i<n;i++){
             if(map[i][c] == true)
                 return false;
         }
+
         int i=0;
         while(true){
             if(r-i >= 0 && c-i >= 0){
                 if(map[r-i][c-i] == true)
-                    return false;
-            } else{
-                break;
-            }
-            i++;
-        }
-
-        i=0;
-        while(true){
-            if(r+i < n && c-i >= 0){
-                if(map[r+i][c-i] == true)
-                    return false;
-            } else{
-                break;
-            }
-            i++;
-        }
-
-        i=0;
-        while(true){
-            if(r+i < n && c+i < n){
-                if(map[r+i][c+i] == true)
                     return false;
             } else{
                 break;
