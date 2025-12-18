@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -53,22 +52,16 @@ public class Main {
     }
 
     private static int getScoreGap() {
-        List<Integer> startTeamIndexList = new ArrayList<>();
-        List<Integer> linkTeamIndexList = new ArrayList<>();
-        for(int i=0;i<map.length;i++){
-            if(pick[i]){
-                startTeamIndexList.add(i);
-            } else{
-                linkTeamIndexList.add(i);
-            }
-        }
-
         int startTeamScore = 0;
         int linkTeamScore = 0;
-        for(int i=0;i<startTeamIndexList.size();i++){
-            for(int j=i+1;j<startTeamIndexList.size();j++){
-                startTeamScore += map[startTeamIndexList.get(i)][startTeamIndexList.get(j)] + map[startTeamIndexList.get(j)][startTeamIndexList.get(i)];
-                linkTeamScore += map[linkTeamIndexList.get(i)][linkTeamIndexList.get(j)] + map[linkTeamIndexList.get(j)][linkTeamIndexList.get(i)];
+
+        for(int i=0;i<pick.length;i++){
+            for(int j=i+1;j<pick.length;j++){
+                if(pick[i] && pick[j]){
+                    startTeamScore += map[i][j] + map[j][i];
+                } else if(!pick[i] && !pick[j]){
+                    linkTeamScore += map[i][j] + map[j][i];
+                }
             }
         }
 
