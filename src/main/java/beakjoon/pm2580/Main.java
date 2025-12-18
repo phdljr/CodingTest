@@ -9,46 +9,63 @@ import java.util.Arrays;
 
 public class Main {
 
-    static int[][] map;
+    static int[][] map = new int[9][9];
+    static int[][] blanks = new int[81][2]; // 빈칸 개수만큼 빈칸의 r, c 좌표
+    static int blankCount = 0;
+    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         for(int i=0;i<9;i++){
             int[] row = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
             map[i] = row;
         }
 
-//        placeNum();
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                if(map[i][j]==0){
+                    blanks[blankCount][0] = i;
+                    blanks[blankCount][1] = j;
+                    blankCount++;
+                }
+            }
+        }
 
+        run(0);
+    }
+
+    private static void run(int currentPlaceCount) throws IOException {
+        if(currentPlaceCount == blankCount){
+            printAndExit();
+            return;
+        }
+
+        int r = blanks[currentPlaceCount][0];
+        int c = blanks[currentPlaceCount][1];
+
+        for(int num=1;num<=9;num++){
+            if(!canPlace(num, r, c))
+                continue;
+
+            map[r][c] = num;
+            run(currentPlaceCount+1);
+            map[r][c] = 0;
+        }
+    }
+
+    private static void printAndExit() throws IOException {
         StringBuilder result = new StringBuilder();
         for(int i=0;i<9;i++){
             for(int j=0;j<9;j++){
                 result.append(map[i][j]).append(" ");
             }
-            result = new StringBuilder(result.toString().trim() + "\n");
+            result.append("\n");
         }
-
-        bw.write(result.toString());
+        bw.write(result.toString().trim());
         bw.flush();
-    }
 
-    private static void placeNum(int count, int n, int r) {
-        if(count == n){
-            return;
-        }
-
-        for(int num=1;num<=9;num++){
-            for(int i=0;i<n;i++){
-                if(!canPlace(num, r, i))
-                    continue;
-
-                map[r][i] = num;
-                placeNum(num, n, r+1);
-                map[r][i] = 0;
-            }
-        }
+        System.exit(0);
     }
 
     private static boolean canPlace(int num, int r, int c){
@@ -56,14 +73,18 @@ public class Main {
         for(int i=0;i<size;i++){
             if(map[i][c] == num)
                 return false;
-        }
-
-        for(int i=0;i<size;i++){
             if(map[r][i] == num)
                 return false;
         }
 
-
+        int minr = r / 3 * 3;
+        int minc = c / 3 * 3;
+        for(int i=minr;i<minr + 3;i++){
+            for(int j=minc;j<minc + 3;j++){
+                if(map[i][j] == num)
+                    return false;
+            }
+        }
 
         return true;
     }
