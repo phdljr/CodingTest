@@ -1,10 +1,11 @@
-package beakjoon.pm1009;
+package beakjoon.pm1920;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
 
 public class Main {
 
@@ -12,30 +13,26 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int t = Integer.parseInt(br.readLine());
+        br.readLine();
+        int[] arr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        Arrays.sort(arr);
+        br.readLine();
+        int[] find =  Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
         StringBuilder result = new StringBuilder();
-        for(int i=0;i<t;i++){
-            String[] str = br.readLine().split(" ");
-            int a =  Integer.parseInt(str[0]);
-            int b = Integer.parseInt(str[1]);
-
-            int temp = 1;
-            for(int j=0;j<b;j++){
-                temp *= a;
-                temp %= 10;
+        for(int f: find){
+            int i = Arrays.binarySearch(arr, f);
+            if(i <= -1){
+                result.append(0 + "\n");
+            } else{
+                result.append(1 + "\n");
             }
-
-            if(temp == 0){
-                temp = 10;
-            }
-
-            result.append(temp).append("\n");
         }
 
         bw.write(result.toString().trim());
         bw.flush();
     }
 }
+
 
 
