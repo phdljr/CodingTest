@@ -1,0 +1,28 @@
+package beakjoon.pm2475;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int[] arr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+
+        int sum = 0;
+        for(int num: arr){
+            sum += num * num;
+        }
+
+        bw.write(sum % 10 + "");
+        bw.flush();
+        bw.close();
+        br.close();
+    }
+}
