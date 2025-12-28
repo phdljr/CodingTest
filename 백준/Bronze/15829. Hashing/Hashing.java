@@ -14,16 +14,17 @@ public class Main {
         br.readLine();
         char[] arr =  br.readLine().toCharArray();
 
-        int result = 0;
+        long result = 0;
         for(int i=0;i<arr.length;i++){
-            int temp = arr[i] - 'a' + 1;
+            long temp = arr[i] - 'a' + 1;
             for(int j=0;j<i;j++){
-                temp *= 31 % 1234567891;
+                temp *= 31;
+                temp %= 1234567891;
             }
             result += temp;
         }
 
-        bw.write(result + "");
+        bw.write(result % 1234567891 + "");
         bw.flush();
         bw.close();
         br.close();
