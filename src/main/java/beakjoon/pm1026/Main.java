@@ -16,12 +16,11 @@ public class Main {
 
         br.readLine();
         int[] aArr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).sorted().toArray();
-        Integer[] bArr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).boxed()
-            .sorted(Comparator.reverseOrder()).toArray(Integer[]::new);
+        int[] bArr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).sorted().toArray();
 
         int sum = 0;
         for(int i=0;i<aArr.length;i++){
-            sum += aArr[i] * bArr[i];
+            sum += aArr[i] * bArr[bArr.length - 1 - i];
         }
 
         bw.write(sum + "");
