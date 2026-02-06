@@ -17,25 +17,24 @@ public class Main {
         int[] nums = Arrays.stream(str.split("[+-]")).mapToInt(Integer::parseInt).toArray();
         String[] opers = str.replaceAll("\\d+", "").split("");
 
-        int result = nums[0];
-        int temp = 0;
-        for(int i=0;i<opers.length;i++){
-            if(opers[i].equals("-")){
-                temp+=nums[i+1];
-            } else{
-                if(temp == 0)
-                    result += nums[i+1];
-                else{
-                    temp+=nums[i+1];
-                    result -= temp;
-                    temp = 0;
+        int sum = nums[0];
+        if(nums.length != 1){
+            boolean isMinus = false;
+            for (int i = 0; i < opers.length; i++) {
+                if (opers[i].equals("-")) {
+                    isMinus = true;
+                    sum -= nums[i + 1];
+                } else {
+                    if (isMinus) {
+                        sum -= nums[i + 1];
+                    } else {
+                        sum += nums[i + 1];
+                    }
                 }
             }
         }
 
-        result += temp;
-
-        bw.write(result + "");
+        bw.write(sum + "");
         bw.flush();
     }
 }
