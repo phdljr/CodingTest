@@ -18,7 +18,7 @@ public class Main {
 
         int prevIndex = cost.length - 1;
         int lastIndex = cost.length - 1;
-        int result = 0;
+        long result = 0;
         int temp = 0;
         while(lastIndex > 0){
             int minCost = Integer.MAX_VALUE;
@@ -31,7 +31,7 @@ public class Main {
 
             lastIndex = temp;
 
-            int sumOfdistance = 0;
+            long sumOfdistance = 0;
             for(int i=lastIndex; i<prevIndex; i++){
                 sumOfdistance += distance[i];
             }
