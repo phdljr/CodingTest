@@ -17,13 +17,10 @@ public class Main {
         int b = Integer.parseInt(str[1]);
         int c = Integer.parseInt(str[2]);
 
-        long result = 1;
+        double result = 1;
+        result = Math.pow(a, b) % c;
 
-        for(int i=0;i<b;i++){
-            result = result * a % c;
-        }
-
-        bw.write(result+"");
+        bw.write((long)result + "");
         bw.flush();
     }
 }
