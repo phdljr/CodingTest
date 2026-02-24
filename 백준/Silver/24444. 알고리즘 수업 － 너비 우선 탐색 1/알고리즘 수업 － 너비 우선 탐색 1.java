@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -53,7 +54,7 @@ public class Main {
 
     private static int[] bfs(ArrayList<ArrayList<Integer>> graph, boolean[] visited, int r) {
         int[] result = new int[graph.size()];
-        Queue<Integer> q = new LinkedList<>();
+        Queue<Integer> q = new ArrayDeque<>();
         q.add(r);
         int order = 1;
         result[r] = order;
