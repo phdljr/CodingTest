@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -6,13 +5,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Set;
 
 public class Main {
 
@@ -79,16 +72,4 @@ public class Main {
             }
         }
     }
-
-    private static boolean checkAllVisited(boolean[] visited) {
-        for(int i=1;i<visited.length;i++){
-            if(!visited[i])
-                return false;
-        }
-
-        return true;
-    }
 }
-
-
-
