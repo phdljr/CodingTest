@@ -5,7 +5,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.PriorityQueue;
 
 public class Main {
 
@@ -51,23 +53,22 @@ public class Main {
         br.close();
     }
 
-    private static void run(int start, List<List<int[]>> list, int[] result) {
-        boolean[] visited = new boolean[result.length];
-        result[start] = 0;
-        for(int i=1;i<result.length;i++) {
-            int min = Integer.MAX_VALUE;
-            int current = 0;
-            for(int j=1; j<visited.length; j++) {
-                if(min > result[j] && !visited[j]) {
-                    min = result[j];
-                    current = j;
-                }
-            }
+    private static void run(int start, List<List<int[]>> list, int[] map) {
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+        pq.offer(new int[]{start, 0});
+        map[start] = 0;
+        while (!pq.isEmpty()) {
+            int[] node = pq.poll();
+            int current = node[0];
+            int weight = node[1];
 
-            visited[current] = true;
-            for (int[] node : list.get(current)) {
-                if (result[node[0]] > result[current] + node[1]) {
-                    result[node[0]] = result[current] + node[1];
+            if(map[current] < weight)
+                continue;
+
+            for (int[] child : list.get(current)) {
+                if (map[child[0]] > map[current] + child[1]) {
+                    map[child[0]] = map[current] + child[1];
+                    pq.offer(new int[]{child[0], map[current] + child[1]});
                 }
             }
         }
