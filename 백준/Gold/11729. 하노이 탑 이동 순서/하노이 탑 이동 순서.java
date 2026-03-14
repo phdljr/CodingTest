@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -33,5 +32,6 @@ public class Main {
         hanoi(n-1, from, sup, to);
         log.append(from).append(" ").append(to).append("\n");
         hanoi(n-1, sup, to, from);
+        
     }
 }
