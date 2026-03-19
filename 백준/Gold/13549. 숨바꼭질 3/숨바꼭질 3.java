@@ -27,11 +27,11 @@ public class Main {
 	}
 
 	private static int bfs(int s, int b) {
-		PriorityQueue<Integer[]> pq = new PriorityQueue<>(Comparator.comparing((a) -> a[1]));
-		pq.add(new Integer[] {s, 0});
+		PriorityQueue<Integer[]> queue = new PriorityQueue<>(Comparator.comparing((a) -> a[1]));
+		queue.add(new Integer[] {s, 0});
 		Set<Integer> visited = new HashSet<>();
-		while(!pq.isEmpty()) {
-			Integer[] current = pq.poll();
+		while(!queue.isEmpty()) {
+			Integer[] current = queue.poll();
 			if(current[0] == b) {
 				return current[1];
 			}
@@ -45,7 +45,7 @@ public class Main {
 			int[][] next = {{current[0] * 2, current[1]}, {current[0] + 1, current[1] + 1}, {current[0] - 1, current[1] + 1}};
 			for(int[] n: next) {
 				if(n[0] >= 0 && n[0] <= 100000) {
-					pq.add(new Integer[] {n[0], n[1]});
+					queue.add(new Integer[] {n[0], n[1]});
 				}
 			}
 		}
