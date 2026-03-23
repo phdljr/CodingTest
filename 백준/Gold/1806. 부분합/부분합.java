@@ -26,10 +26,7 @@ public class Main {
 		while (true) {
             if (sum >= s) {
                 minLen = Math.min(minLen, right - left);
-                if(left < right)
-                	sum -= arr[left++];
-                else
-                	break;
+                sum -= arr[left++];
             } else if (right == n) {
                 break;
             } else {
