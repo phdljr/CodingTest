@@ -50,23 +50,18 @@ public class Main {
 			Integer[] currentNode = q.poll();
 			int cn = currentNode[0];
 			int cw = currentNode[1];
+
+			if(result[1] < cw) {
+				result[0] = cn;
+				result[1] = cw;
+			}
 			
-			visited[cn] = true;
-			
-			boolean isLast = true;
 			for(Integer[] nn: g.get(cn)) {
 				if(visited[nn[0]])
 					continue;
-				
+
+				visited[cn] = true;
 				q.add(new Integer[] {nn[0], cw + nn[1]});
-				isLast = false;
-			}
-			
-			if(isLast) {
-				if(result[1] < cw) {
-					result[0] = cn;
-					result[1] = cw;
-				}
 			}
 		}
 		
