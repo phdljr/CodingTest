@@ -2,9 +2,9 @@ package beakjoon.pm11049;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+
 
 class Matrix{
     int r;
@@ -18,27 +18,37 @@ class Matrix{
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int result = Integer.MAX_VALUE;
         int n = Integer.parseInt(br.readLine());
-        Matrix[] m = new Matrix[n];
-        for(int i=0;i<n;i++){
+        Matrix[] m = new Matrix[n+1];
+        for(int i=1;i<=n;i++) {
             String[] str = br.readLine().split(" ");
-            m[i] = new Matrix(Integer.parseInt(str[0]),Integer.parseInt(str[1]));
+            int r = Integer.parseInt(str[0]);
+            int c = Integer.parseInt(str[1]);
+            m[i] = new Matrix(r, c);
         }
 
-        int[] d = new int[n+1];
-        d[1] = m[0].r * m[0].c;
-        d[2] = m[0].r * m[0].c * m[1].c;
+        // dp[i][j]: i부터 j까지의 최소 연산 횟수
+        int[][] dp = new int[n+1][n+1];
 
-        bw.write(result + "");
+        for(int d=1;d<=n;d++) { // 행렬 간의 간격
+            for(int i=1;i+d<=n;i++) { // 시작 행렬
+                int j = i + d; // 끝 행렬
+                dp[i][j] = Integer.MAX_VALUE;
+
+                for(int k=i;k<j;k++) { // 분할 지점
+                    int cost = dp[i][k] + dp[k+1][j] + m[i].r * m[k].c * m[j].c;
+                    dp[i][j] = Math.min(dp[i][j], cost);
+                }
+            }
+        }
+
+        bw.write(dp[1][n] + "");
         bw.flush();
         bw.close();
         br.close();
     }
 }
-
-
