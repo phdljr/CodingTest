@@ -42,7 +42,6 @@ public class Main {
         if(!parent.get(from).equals(from)){
             parent.put(from, find(parent, parent.get(from)));
         }
-
         return parent.get(from);
     }
 
@@ -53,7 +52,6 @@ public class Main {
             parent.put(p2, p1);
             size.put(p1, size.get(p1) + size.get(p2));
         }
-
         return size.get(p1);
     }
 }
