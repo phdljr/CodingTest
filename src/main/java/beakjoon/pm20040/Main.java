@@ -12,46 +12,46 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        StringBuilder result = new StringBuilder();
-        int T = Integer.parseInt(br.readLine());
-        for(int tc=0;tc<T;tc++) {
-            int fc =  Integer.parseInt(br.readLine());
-            HashMap<String, String> parent = new HashMap<>();
-            HashMap<String, Integer> size = new HashMap<>();
-            for(int i=0;i<fc;i++) {
-                String[] str = br.readLine().split(" ");
-                String from = str[0];
-                String to = str[1];
-                parent.putIfAbsent(from, from);
-                parent.putIfAbsent(to, to);
-                size.putIfAbsent(from, 1);
-                size.putIfAbsent(to, 1);
+        String[] str = br.readLine().split(" ");
+        int n = Integer.parseInt(str[0]);
+        int m = Integer.parseInt(str[1]);
 
-                int count = union(parent, size, from, to);
-                result.append(count).append("\n");
-            }
+        int result = 0;
+        int[] parent = new int[n];
+        for(int i = 0; i < n; i++){
+            parent[i] = i;
         }
 
-        bw.write(result.toString().trim());
+        for(int i=0;i<m;i++){
+            str = br.readLine().split(" ");
+            int from = Integer.parseInt(str[0]);
+            int to = Integer.parseInt(str[1]);
+
+            if(find(parent, from) == find(parent, to)){
+                result = i + 1;
+                break;
+            }
+
+            union(parent, from, to);
+        }
+
+        bw.write(result + "");
         bw.flush();
         bw.close();
         br.close();
     }
 
-    private static String find(HashMap<String, String> parent, String from) {
-        if(!parent.get(from).equals(from)){
-            parent.put(from, find(parent, parent.get(from)));
+    private static int find(int[] parent, int from) {
+        if(parent[from] == from){
+            return from;
         }
-        return parent.get(from);
+        return parent[from] = find(parent, parent[from]);
     }
 
-    private static int union(HashMap<String, String> parent, HashMap<String, Integer> size, String from, String to) {
-        String p1 = find(parent, from);
-        String p2 = find(parent, to);
-        if(!p1.equals(p2)){
-            parent.put(p2, p1);
-            size.put(p1, size.get(p1) + size.get(p2));
-        }
-        return size.get(p1);
+    private static void union(int[] parent, int from, int to) {
+        int p1 = find(parent, from);
+        int p2 = find(parent, to);
+
+        parent[p2] = p1;
     }
 }
