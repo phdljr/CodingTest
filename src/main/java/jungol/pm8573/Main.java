@@ -20,7 +20,10 @@ public class Main {
         if (n % 2 == 1) {
             result += arr[n / 2];
         } else {
-            result += arr[n / 2 - 1] + " " + arr[n / 2];
+            if(arr[n / 2 - 1] != arr[n / 2])
+                result += arr[n / 2 - 1] + " " + arr[n / 2];
+            else
+                result += arr[n / 2];
         }
 
         bw.write(result);
