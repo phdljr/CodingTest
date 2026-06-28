@@ -1,46 +1,54 @@
 package beakjoon.pm15649;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class Main {
 
-    static boolean[] check = new boolean[10];
-    static int[] a = new int[10];
-    static StringBuilder sb = new StringBuilder();
+    static String result = "";
+    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static int[] temp = new int[10];
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        print(0, n, m);
-        System.out.println(sb.toString());
+        String[] str = br.readLine().split(" ");
+        int n = Integer.parseInt(str[0]);
+        int m = Integer.parseInt(str[1]);
+
+        int[] arr = new int[n+1];
+        boolean[] check = new boolean[n+1];
+        for(int i=1;i<=n;i++){
+            arr[i] = i;
+        }
+
+        print(0, n, m, arr, check);
     }
 
-    /**
-     * n: 1~n까지의 자연수, m: 중복 없이 m개 뽑기
-     * @param index
-     * @param n
-     * @param m
-     */
-
-    private static void print(int index, int n, int m){
-        if(index == m){
+    private static void print(int count, int n, int m, int[] arr, boolean[] check)
+        throws IOException {
+        if(count == m){
+            result = "";
             for(int i=0;i<m;i++){
-                sb.append(a[i]);
-                if(i != m-1)
-                    sb.append(" ");
-                else
-                    sb.append("\n");
+                result += temp[i] + " ";
             }
+            result = result.trim() + "\n";
+            bw.write(result);
+            bw.flush();
             return;
         }
-        for(int i=1;i<=n;i++){
-            if(check[i]) continue;
+
+        for(int i=1; i <= n; i++){
+            if(check[i]){
+                continue;
+            }
 
             check[i] = true;
-            a[index] = i;
-            print(index+1, n, m);
+            temp[count] = arr[i];
+            print(count+1, n, m, arr, check);
             check[i] = false;
         }
     }

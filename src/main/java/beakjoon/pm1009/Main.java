@@ -1,32 +1,41 @@
 package beakjoon.pm1009;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
+import java.io.OutputStreamWriter;
 
 public class Main {
-    static int k;
-    static char[] arr;
-    static boolean[] check;
-    static int[] numArr;
-    static long answer = 1;
+
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-        k = Integer.parseInt(sc.nextLine()); // 부등호 개수
-        numArr = new int[k+1];
-        arr = sc.nextLine().toCharArray(); // 부등호 배열
-        check = new boolean[10]; // 사용된 숫자 사용 여부
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        go(0, 0, 9);
-    }
+        int t = Integer.parseInt(br.readLine());
 
-    private static void go(int index, int bigger, int less){
-        // 종료 조건
-        if(index == k){
+        StringBuilder result = new StringBuilder();
+        for(int i=0;i<t;i++){
+            String[] str = br.readLine().split(" ");
+            int a =  Integer.parseInt(str[0]);
+            int b = Integer.parseInt(str[1]);
 
+            int temp = 1;
+            for(int j=0;j<b;j++){
+                temp *= a;
+                temp %= 10;
+            }
+
+            if(temp == 0){
+                temp = 10;
+            }
+
+            result.append(temp).append("\n");
         }
 
-        // 실패 조건
+        bw.write(result.toString().trim());
+        bw.flush();
     }
 }
+
+

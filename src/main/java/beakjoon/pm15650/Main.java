@@ -1,43 +1,74 @@
 package beakjoon.pm15650;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class Main {
 
-    static boolean[] check = new boolean[10];
-    static int[] a = new int[10];
-    static StringBuilder sb = new StringBuilder();
+    static boolean[][] map;
+    static int count = 0;
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        print(0, 1, n, m);
-        System.out.println(sb.toString());
+        int n = Integer.parseInt(br.readLine());
+        map = new boolean[n][n];
+
+        placeQueen(0, n, 0);
+
+        bw.write(count + "");
+        bw.flush();
     }
 
-    /**
-     * n: 1~n까지의 자연수, m: 중복 없이 m개 뽑기
-     * @param index
-     * @param n
-     * @param m
-     */
-
-    private static void print(int index, int start, int n, int m){
-        if(index == m){
-            for(int i=0;i<m;i++){
-                sb.append(a[i]);
-                if(i != m-1)
-                    sb.append(" ");
-                else
-                    sb.append("\n");
-            }
+    private static void placeQueen(int numOfQueen, int n, int r) {
+        if(numOfQueen == n){
+            count++;
             return;
         }
-        for(int i=start;i<=n;i++){
-            a[index] = i;
-            print(index+1, i + 1, n, m);
+
+        for(int i=0;i<n;i++){
+            if(!canPlace(r, i))
+                continue;
+
+            map[r][i] = true;
+            placeQueen(numOfQueen + 1, n, r+1);
+            map[r][i] = false;
         }
+    }
+
+    private static boolean canPlace(int r, int c){
+        int n = map.length;
+        for(int i=0;i<n;i++){
+            if(map[i][c] == true)
+                return false;
+        }
+
+        int i=0;
+        while(true){
+            if(r-i >= 0 && c-i >= 0){
+                if(map[r-i][c-i] == true)
+                    return false;
+            } else{
+                break;
+            }
+            i++;
+        }
+
+        i=0;
+        while(true){
+            if(r-i >= 0 && c+i < n){
+                if(map[r-i][c+i] == true)
+                    return false;
+            } else{
+                break;
+            }
+            i++;
+        }
+
+        return true;
     }
 }

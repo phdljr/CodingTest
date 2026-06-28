@@ -1,0 +1,22 @@
+WITH PC_CODE AS (
+    SELECT
+        SUM(CODE) AS S
+    FROM
+        SKILLCODES
+    WHERE
+        NAME = 'Python'
+        OR NAME = 'C#'
+)
+
+SELECT 
+    ID, 
+    EMAIL,
+    FIRST_NAME,
+    LAST_NAME
+FROM
+    DEVELOPERS
+WHERE
+    SKILL_CODE & (SELECT S FROM PC_CODE) > 0
+ORDER BY
+    ID
+

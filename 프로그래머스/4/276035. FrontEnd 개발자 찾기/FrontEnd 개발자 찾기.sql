@@ -1,0 +1,21 @@
+WITH FRONT_CODE AS (
+    SELECT
+        SUM(CODE) AS `CODE`
+    FROM
+        SKILLCODES
+    WHERE
+        CATEGORY = 'Front End'
+)
+
+SELECT
+    ID,
+    EMAIL,
+    FIRST_NAME,
+    LAST_NAME
+FROM
+    DEVELOPERS
+    JOIN FRONT_CODE
+WHERE
+    SKILL_CODE & FRONT_CODE.CODE > 0
+ORDER BY 
+    ID ASC
